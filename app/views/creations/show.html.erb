@@ -1,0 +1,44 @@
+<% provide(:title, "Creations") %>
+<!DOCTYPE html>
+<html X-Frame-Options: SAMEORIGIN>
+  <head>
+    <title><%= yield(:title) %> |</title>
+  </head>
+
+  <body>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @creation.title %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @creation.origin %>
+</p>
+
+<p>
+  <strong>Totran:</strong>
+  <%= @creation.totran %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @creation.destination %>
+</p>
+
+<p>
+  <strong>Translated:</strong>
+  <div id= "textmodif">
+  <%= @creation.totran %>
+  </div>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @creation.creator %>
+</p>
+
+<%= link_to 'Back', creations_path, class: "btn btn-sm btn-success" %>
